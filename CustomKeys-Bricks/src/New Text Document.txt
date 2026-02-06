@@ -1,0 +1,359 @@
+  const scriptsOptions = [
+    [
+      {
+        type: "title",
+        value: "Custom Keys - Bricks"
+      },
+      {
+        type: "switch",
+        leftValue: "Game Hud",
+        rightValue: "Options",
+        asChange: switchWindows,
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "General"
+      },
+      {
+        type: "title",
+        value: "Visuals",
+        font: 3
+      },
+      {
+        type: "selection",
+        desc: "Theme",
+        options: [
+          { id: 'pu', show: 'Purple' },
+          { id: 're', show: 'Red' },
+          { id: 'gr', show: 'Green' },
+          { id: 'ye', show: 'Yellow' },
+          { id: 'bl', show: 'Blue' },
+        ],
+        asChange: switchTheme,
+        cur: theme
+      },
+      {
+        type: "selection",
+        desc: "Display",
+        options: [
+          { id: "co", show: "Color" },
+          { id: "pl", show: "Plain" },
+          { id: "em", show: "Emoji" }
+        ],
+        asChange: switchDis,
+        cur: dis
+      },
+      {
+        type: "title",
+        value: "Accessability",
+        font: 3
+      },
+      {
+        type: "selection",
+        desc: "HUD-S",
+        options: [
+          { id: "sh", show: "Short" },
+          { id: "lo", show: "Long" }
+        ],
+        asChange: switchHUDS,
+        cur: hudS
+      },
+      {
+        type: "selection",
+        desc: "GO-S",
+        options: [
+          { id: "sh", show: "Short" },
+          { id: "lo", show: "Long" }
+        ],
+        asChange: switchGoS,
+        cur: goS
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Kill Switch"
+      },
+      {
+        type: "title",
+        value: "Binding",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Trigger",
+        value: "c+0"
+      }
+    ],
+    /*[
+      {
+        type: "title",
+        value: "Auto Click Clip"
+      },
+      {
+        type: "title",
+        value: "Binding",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Trigger",
+        value: "c+1"
+      },
+      {
+        desc: "Action",
+        value: "v"
+      },
+      {
+        type: "title",
+        value: "Switches",
+        font: 3
+      },
+      {
+        type: "toggle",
+        value: "Mode"
+      },
+      {
+        type: "toggle",
+        value: "Mouse"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Smart AFK"
+      },
+      {
+        type: "title",
+        value: "Binding",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Trigger",
+        value: "c+2"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Quick Insert"
+      },
+      {
+        type: "title",
+        value: "Binding",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Trigger",
+        value: "c+3"
+      },
+      {
+        type: "input",
+        desc: "Action",
+        value: "t"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Saves Snatcher"
+      },
+      {
+        type: "title",
+        value: "Binding",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Trigger",
+        value: "c+4"
+      },
+      {
+        type: "title",
+        value: "Paths",
+        font: 3
+      },
+      {
+        type: "input",
+        desc: "Origins",
+        value: ""
+      },
+      {
+        type: "selection",
+        desc: "S-Origins",
+        options: ""
+      },
+      {
+        type: "input",
+        desc: "Backup",
+        value: ""
+      },
+      {
+        type: "selection",
+        desc: "S-Backup",
+        options: ""
+      },
+      {
+        type: "title",
+        value: "Switches",
+        font: 3
+      },
+      {
+        type: "toggle",
+        value: "Auto replace"
+      }
+    ]*/
+  ];
+
+  const scriptsHud = [
+    [
+      {
+        type: "title",
+        value: "Custom Keys - Bricks"
+      },
+      {
+        type: "switch",
+        leftValue: "Game Hud",
+        rightValue: "Options",
+        asChange: switchWindows
+      },
+      {
+        type: "toggle",
+        value: "GO-GAME"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Kill Switch"
+      },
+      {
+        type: "toggle",
+        value: "Switch"
+      }
+    ],
+    /*[
+      {
+        type: "title",
+        value: "Auto Click Clip"
+      },
+      {
+        type: "title",
+        value: "Script Stats",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "Clicks cap"
+      },
+      {
+        type: "display",
+        desc: "Clicks made"
+      },
+      {
+        type: "title",
+        value: "Scripts Config",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "Mode"
+      },
+      {
+        type: "display",
+        desc: "Mouse"
+      },
+      {
+        type: "toggle",
+        value: "Switch"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Smart AFK"
+      },
+      {
+        type: "title",
+        value: "Script Stats",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "Timer",
+        type2: "long"
+      },
+      {
+        type: "display",
+        desc: "NM-Time",
+        type2: "long"
+      },
+      {
+        type: "toggle",
+        value: "Switch"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Quick Insert"
+      },
+      {
+        type: "title",
+        value: "Script Stats",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "I-Sting",
+        type2: "long"
+      },
+      {
+        type: "toggle",
+        value: "Switch"
+      }
+    ],
+    [
+      {
+        type: "title",
+        value: "Saves Snatcher"
+      },
+      {
+        type: "title",
+        value: "Script Config",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "Origins",
+        type2: "long"
+      },
+      {
+        type: "display",
+        desc: "Backup",
+        type2: "long"
+      },
+      {
+        type: "title",
+        value: "Script Stats",
+        font: 3
+      },
+      {
+        type: "display",
+        desc: "B-Time",
+        type2: "long"
+      },
+      {
+        type: "display",
+        desc: "Files Count"
+      },
+      {
+        type: "toggle",
+        value: "Switch"
+      }
+    ],*/
+  ];
