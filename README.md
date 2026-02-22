@@ -22,8 +22,9 @@ In VS Code, navigate to the project directory and run the following command in t
 
 ```bash
 npm run tauri dev
-
+```
 to build it as an app, use:
 
 ```bash
 npm run tauri build
+```
