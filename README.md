@@ -8,3 +8,7 @@ with much more user friendly UI, that ll allow manual scripts switching along wi
 making transparent overlay for games which may display switches above the game window.
 
 Project under work.
+
+**HOW TO RUN LOCALLY:**
+
+In VS-Code, use cd to get to the directory, and type in terminal, "npm run tauri dev".
