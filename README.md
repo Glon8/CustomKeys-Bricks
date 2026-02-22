@@ -1,16 +1,24 @@
 # CustomKeys-Bricks
-Custom Keys Bricks, its a Custom Keys V2. Based on JS, React-Vite, SCSS, Rust and Tauri. The build allows to create an application, nearly for every OS,
-while using simplicity of JS, React and SCSS combo for UI, while Rust and Tauri hold the connectivity and systems logic. Planned that the main app, as host will
-hold all the connectivity and all what user may need is just to drop the script file in to modules folder.
+CustomKeys-Bricks is a Custom Keys V2 application built with JavaScript, React-Vite, SCSS, Rust, and Tauri.
+This tech stack allows you to create an application for nearly every OS—leveraging the simplicity of JS, React, and SCSS for the UI,
+while Rust and Tauri handle connectivity and system logic. The main app (host) manages all connectivity,
+so users only need to drop script files into the modules folder.
 
-The new version ll be much more faster and over all "built properly", with seperate threats per module(script), by built over Rust which is a compile language and
-with much more user friendly UI, that ll allow manual scripts switching along with Key Binding functionality. The last addon planned, is to add a **GO-GAME** function,
-making transparent overlay for games which may display switches above the game window.
+## Key Features
 
-Project under work.
+The new version is much faster and properly architected with:
+- Separate threads per module (script) built on Rust, a compiled language for better performance
+- A more user-friendly UI with manual script switching
+- Key Binding functionality
+- A planned **GO-GAME** feature that creates a transparent overlay for games to display switches above the game window
 
-**HOW TO RUN LOCALLY:**
+## Status
 
-In VS-Code, use cd to get to the directory, and type in terminal, "npm run tauri dev".
+Project under development.
 
-Project still under work.
+## How to Run Locally
+
+In VS Code, navigate to the project directory and run the following command in the terminal:
+
+```bash
+npm run tauri dev
