@@ -25,5 +25,5 @@ npm run tauri dev
 
 to build it as an app, use:
 
-````bash
+```bash
 npm run tauri build
