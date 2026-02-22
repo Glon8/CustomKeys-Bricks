@@ -12,3 +12,5 @@ Project under work.
 **HOW TO RUN LOCALLY:**
 
 In VS-Code, use cd to get to the directory, and type in terminal, "npm run tauri dev".
+
+Project still under work.
